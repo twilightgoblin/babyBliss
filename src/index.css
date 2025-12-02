@@ -137,24 +137,5 @@
     transform: translateY(-8px) scale(1.02);
   }
 
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    .dark-mode {
-      --primary: #ff9a9e;
-      --secondary: #fecfef;
-      --accent: #a8edea;
-      --dark: #f7fafc;
-      --light: #1a202c;
-    }
 
-    .dark-mode body {
-      background-color: #1a202c;
-      color: #f7fafc;
-    }
-
-    .dark-mode .glass {
-      background: rgba(45, 55, 72, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  }
 }

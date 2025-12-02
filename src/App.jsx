@@ -4,7 +4,6 @@ import { CartProvider } from './context/CartContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import InstallPrompt from './components/InstallPrompt';
-import DarkModeToggle from './components/DarkModeToggle';
 import OnboardingPopup from './components/OnboardingPopup';
 import Home from './pages/Home';
 import Products from './pages/Products';
@@ -42,7 +41,6 @@ function App() {
           </main>
           <Footer />
           <InstallPrompt />
-          <DarkModeToggle />
           <OnboardingPopup />
         </div>
       </CartProvider>
