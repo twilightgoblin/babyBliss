@@ -94,7 +94,7 @@ const Home = () => {
 
   const categories = [
     { name: 'Clothing', image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=400&fit=crop', gradient: 'from-cyan-300 to-blue-300' },
-    { name: 'Baby Care', image: 'https://images.unsplash.com/photo-1584462689827-c0e0c7c7e0c7?w=400&h=400&fit=crop', gradient: 'from-pink-300 to-rose-300' },
+    { name: 'Baby Care', image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop', gradient: 'from-pink-300 to-rose-300' },
     { name: 'Toys', image: 'https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=400&fit=crop', gradient: 'from-green-300 to-emerald-300' },
     { name: 'Essentials', image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop', gradient: 'from-amber-300 to-orange-300' }
   ];
