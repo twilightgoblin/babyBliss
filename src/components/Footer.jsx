@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-center text-gray-400 text-sm">
-          <p>© 2024 BabyBliss. All rights reserved. Made with Kiro IDE.</p>
+          <p>© 2025 BabyBliss. All rights reserved.</p>
         </div>
       </div>
     </footer>

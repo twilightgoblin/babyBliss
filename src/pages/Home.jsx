@@ -93,10 +93,10 @@ const Home = () => {
   };
 
   const categories = [
-    { name: 'Clothing', icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>, gradient: 'from-cyan-300 to-blue-300' },
-    { name: 'Baby Care', icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>, gradient: 'from-pink-300 to-rose-300' },
-    { name: 'Toys', icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>, gradient: 'from-green-300 to-emerald-300' },
-    { name: 'Essentials', icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>, gradient: 'from-amber-300 to-orange-300' }
+    { name: 'Clothing', image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400&h=400&fit=crop', gradient: 'from-cyan-300 to-blue-300' },
+    { name: 'Baby Care', image: 'https://images.unsplash.com/photo-1584462689827-c0e0c7c7e0c7?w=400&h=400&fit=crop', gradient: 'from-pink-300 to-rose-300' },
+    { name: 'Toys', image: 'https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=400&fit=crop', gradient: 'from-green-300 to-emerald-300' },
+    { name: 'Essentials', image: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop', gradient: 'from-amber-300 to-orange-300' }
   ];
 
   const renderStars = (rating) => {
@@ -205,15 +205,19 @@ const Home = () => {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((category, index) => (
-              <a key={index} href="#products" className="category-card group relative glass rounded-3xl p-8 text-center shadow-premium hover:shadow-premium-lg transition-all duration-500 hover:scale-105">
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`}></div>
+              <a key={index} href="#products" className="category-card group relative glass rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-lg transition-all duration-500 hover:scale-105">
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
                 <div className="relative">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <div className={`bg-gradient-to-br ${category.gradient} bg-clip-text text-transparent`}>
-                      {category.icon}
-                    </div>
+                  <div className="aspect-square overflow-hidden">
+                    <img 
+                      src={category.image} 
+                      alt={category.name} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                    />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
+                  </div>
                 </div>
               </a>
             ))}
