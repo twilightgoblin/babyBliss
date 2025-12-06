@@ -40,7 +40,7 @@ const OnboardingPopup = () => {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Welcome to <span className="text-gradient">BabyBliss</span>!
+            Welcome to <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">BabyBliss</span>!
           </h2>
           
           <p className="text-lg text-gray-600 mb-6 leading-relaxed">
